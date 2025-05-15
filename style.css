@@ -1,5 +1,5 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Great Vibes', cursive;
   margin: 0;
   padding: 0;
   background-color: #f8f9fa;
@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background-color: #ff7043;
+  background-color: #000000;
   padding: 20px;
   text-align: center;
   color: white;
@@ -22,7 +22,7 @@ nav a {
 
 .section {
   padding: 40px;
-  text-align: center;
+  text-align: left;
 }
 
 .card-container {
@@ -61,6 +61,12 @@ nav a {
   gap: 30px;
   justify-content: center;
   align-items: flex-start;
+}
+
+.dish-image {
+  width: 100%; 
+  max-width: 400px; 
+  height: auto;
 }
 
 .recipe-image {
