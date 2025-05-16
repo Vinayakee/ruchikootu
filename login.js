@@ -27,3 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error: Google button not found.");
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("adminLink").addEventListener("click", function (event) {
+        event.preventDefault(); // Prevents default link behavior
+
+        let adminCode = prompt("Enter Admin Code:");
+        let correctCode = "1234"; // Replace this with your actual admin code
+
+        if (adminCode === correctCode) {
+            alert("Access Granted! Redirecting...");
+            window.location.href = "admin.html"; // Redirect to admin dashboard
+        } else {
+            alert("Incorrect Code. Access Denied!");
+        }
+    });
+});
