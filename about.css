@@ -1,0 +1,240 @@
+/* Basic Reset & Global Styles */
+:root {
+  --primary-color: #A0522D; /* Sienna - a warm brown */
+  --secondary-color: #D2B48C; /* Tan - a lighter, softer brown */
+  --accent-color: #FF6347; /* Tomato - a vibrant reddish-orange for highlights */
+  --text-color: #333;
+  --light-text-color: #555;
+  --bg-color: #FDF5E6; /* Old Lace - a very light cream for the page background */
+  --light-bg-color: #FFF; /* Pure white for elements like the header and feature boxes */
+  --border-color: #E0E0E0; /* Light gray for subtle borders */
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--accent-color);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean sans-serif */
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased; /* Smoother fonts on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Smoother fonts on macOS Firefox */
+}
+
+.container {
+  max-width: 960px; /* Limits content width for readability */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 20px; /* Adds padding on the sides for smaller screens */
+}
+
+/* Header Styles */
+header {
+  background-color: var(--light-bg-color);
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+header .logo {
+  font-family: 'Georgia', serif; /* A classic serif for the logo */
+  font-size: 1.8em;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: block; /* Ensures logo takes full width for centering */
+  text-align: center; /* Centers the logo in the header */
+}
+
+/* Main Content Sections */
+main section {
+  padding: 60px 0; /* Generous vertical padding for sections */
+  border-bottom: 1px solid var(--border-color); /* Separator between sections */
+}
+
+main section:last-child {
+  border-bottom: none; /* No border after the last section */
+}
+
+/* Hero Section (the top "About Us" part) */
+.hero {
+  background-color: var(--secondary-color);
+  color: #fff; /* White text for contrast on the tan background */
+  text-align: center;
+  padding: 80px 0; /* More padding to make it prominent */
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #fff; /* Ensures heading is white */
+}
+
+.hero .tagline {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #ffe; /* Slightly off-white for the tagline */
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #f8f8f8; /* Very light gray for body text in hero */
+}
+
+/* General Heading Styles */
+h1, h2 {
+  font-family: 'Georgia', serif; /* Consistent serif for main headings */
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+h1 { /* This applies to non-hero H1s if any, but primarily for hero */
+  font-size: 2.8em;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--primary-color);
+  margin-top: 40px; /* Ensures space above new headings in sections */
+  text-align: center; /* Centers section titles */
+}
+
+/* Paragraph Styles */
+p {
+  margin-bottom: 20px;
+  font-size: 1.05em;
+  color: var(--light-text-color);
+  text-align: justify; /* Justify text for a cleaner block appearance */
+}
+
+/* List Styles (Features Section) */
+ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.feature-list li {
+  background-color: var(--light-bg-color);
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  border-left: 5px solid var(--accent-color); /* Accent color on the left */
+  border-radius: 5px; /* Slightly rounded corners */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08); /* Subtle shadow for depth */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+  color: var(--text-color);
+}
+
+.feature-list li:hover {
+  transform: translateY(-3px); /* Lifts the item on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feature-list strong {
+  color: var(--primary-color); /* Makes strong text stand out */
+}
+
+/* Emoji Styling */
+.emoji {
+  margin-right: 10px;
+  font-size: 1.2em;
+  vertical-align: middle; /* Aligns emoji with text */
+}
+
+/* Link Styles */
+a {
+  color: var(--link-color);
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 40px; /* Space above footer */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero .tagline {
+    font-size: 1.1em;
+  }
+
+  main section {
+    padding: 40px 0;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .feature-list li {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero .tagline {
+    font-size: 1em;
+  }
+
+  main section {
+    padding: 30px 0;
+  }
+}
