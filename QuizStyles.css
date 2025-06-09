@@ -1,70 +1,100 @@
+/* --- BODY & BACKGROUND --- */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #ffe29f, #ffa99f);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 0; height: 100vh;
+  display: flex; justify-content: center; align-items: flex-start;
+  overflow-y: auto;
+  background-image: url(quizFront2.jpg);
+  background-repeat: no-repeat; background-size: cover; background-position: center;
+  transition: background-image 0.7s ease-in-out;
+    padding-top: 30px;       /* <-- optional: add some space at the top */
 }
 
+/* --- CONTAINER --- */
 .quiz-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
+  background: rgba(166, 163, 163, 0.765);
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  margin: 10px;
+  max-height: 80vh;      /* Set a maximum height */
+  overflow-y: auto;      /* Enable vertical scrolling if needed */
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #ff6347;
+/* --- HEADINGS --- */
+h1 { 
+font-family: 'Georgia', serif;
+  margin-bottom: 25px; color: hwb(9 2% 58% / 0.927); }
+h2 { 
+  font-family: 'Georgia', serif;
+
+  margin-bottom: 20px; color: #ae102bc1; }
+
+/* --- LOGIN CHOICE BUTTONS --- */
+#login-choice { display: flex; justify-content: center; gap: 20px; }
+.primary-btn {
+  background-color: #d97745; color: white;
+  padding: 12px 30px; border: none; border-radius: 12px;
+  font-size: 1.1em; cursor: pointer; transition: transform 0.2s;
+}
+.primary-btn:hover { transform: scale(1.05); }
+.admin-btn {
+  background-color: transparent; color: #555;
+  padding: 10px 20px; border: 2px solid #555; border-radius: 12px;
+  font-size: 1em; cursor: pointer; transition: background-color 0.3s;
+}
+.admin-btn:hover { background-color: #eee; }
+
+/* --- INPUTS & LABELS --- */
+input[type="text"], select, textarea {
+  width: 80%; max-width: 400px; padding: 8px 10px;
+  margin: 8px 0 16px; font-size: 1em;
+  border: 1px solid #ccc; border-radius: 8px;
+}
+textarea { resize: vertical; }
+
+/* --- FORMS & ADMIN --- */
+#admin-form label {
+  display: block; text-align: left; font-weight: 600;
+  margin-bottom: 6px;
+}
+.admin-buttons {
+  display: flex; justify-content: space-between; margin-top: 10px;
 }
 
-#question {
-    font-size: 1.3em;
-    margin-bottom: 15px;
+/* --- CATEGORY & START BUTTON --- */
+#category-select label {
+  font-size: 1.2em; font-weight: 600;
+}
+#category { margin: 15px 0; padding: 8px 10px; font-size: 1.1em;
+  border-radius: 8px; border: 1px solid #ccc; width: 60%; max-width: 300px;
 }
 
-#options {
-    list-style-type: none;
-    padding: 0;
-}
-
-.option-item {
-    background-color: #f0f0f0;
-    padding: 12px 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.option-item:hover {
-    background-color: #ffd6b3;
-}
-
-.option-item.selected {
-    background-color: #ffa07a;
-    color: white;
-    font-weight: bold;
-}
-
+/* --- GENERIC BUTTONS --- */
 button {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    font-size: 1em;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
+  background-color: #ff6347; color: white;
+  border: none; padding: 12px 30px; font-size: 1.1em; border-radius: 12px;
+  cursor: pointer; margin-top: 10px; transition: background-color 0.3s;
 }
+button:disabled { background-color: #ccc; cursor: not-allowed; }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+/* --- QUIZ BOX --- */
+#question { font-size: 1.3em; margin-bottom: 15px; font-weight: 600; }
+#options { list-style: none; padding: 0; margin: 0 auto; max-width: 450px; }
+.option-item {
+  background: #f0f0f0; padding: 14px 22px; margin: 10px 0;
+  border-radius: 10px; cursor: pointer; font-weight: 600;
+  transition: background-color 0.3s; user-select: none;
 }
+.option-item:hover { background-color: #ffd6b3; }
+.option-item.selected { background-color: #ffa07a; color: white; }
+
+/* --- RESULTS --- */
+#result-box h2 { margin-bottom: 15px; }
+.explanation-item { text-align: left; margin: 10px 0; font-size: 1em; }
+.wrong-answer { color: #d9534f; font-weight: 700; }
+.correct-answer { color: #116411; font-weight: 700; }
+hr { border: none; border-bottom: 1px solid #ccc; margin: 10px 0; }
