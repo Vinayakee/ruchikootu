@@ -1,25 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quizzy - Recipe Quiz Competition</title>
-    <link rel="stylesheet" href="QuizStyles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quizzy - Recipe Quiz Competition</title>
+  <link rel="stylesheet" href="QuizStyles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>🍲 Quizzy - Recipe Quiz Competition 🍴</h1>
-        <div id="quiz-box">
-            <div id="question">Loading question...</div>
-            <ul id="options"></ul>
-            <button id="next-btn" disabled>Next</button>
-        </div>
-        <div id="result-box" style="display: none;">
-            <h2>Your Score: <span id="score"></span>/5</h2>
-            <button onclick="location.reload()">Play Again</button>
-        </div>
+  <!-- LOGIN CHOICE -->
+  <div class="quiz-container" id="login-section">
+    <h1> Ruchikkootu:</h1>
+    <h2>Recipe Quiz Competition</h2>
+    <p>Test your culinary knowledge and learn new recipes!</p>
+    <div id="login-choice">
+      <button id="player-login-btn" class="primary-btn">Login as Player</button>
+      <button id="admin-login-btn" class="admin-btn">Challenge Others</button>
     </div>
+  </div>
 
-    <script src="quizScript.js"></script>
+  <!-- PLAYER NAME ENTRY -->
+  <div class="quiz-container" id="player-section" style="display:none;">
+    <h2>Welcome, <span id="player-display-name"></span>!</h2>
+    <input type="text" id="player-name-input" placeholder="Enter your name" />
+    <button id="player-name-submit" disabled>Proceed</button>
+  </div>
+
+  <!-- CATEGORY SELECTION -->
+  <div class="quiz-container" id="category-select" style="display:none;">
+    <h2 id="greet-player-heading">Hello, <span id="player-name-heading"></span>!</h2>
+    <label for="category">Choose a Quiz Category:</label>
+    <select id="category">
+      <option value="" selected disabled>--Select--</option>
+      <option value="snacks">Snacks, Desserts & Beverages</option>
+      <option value="main">Main Course</option>
+      <option value="curries">Curries</option>
+    </select>
+    <button id="start-btn" disabled>Start Quiz</button>
+  </div>
+
+  <!-- QUIZ UI -->
+  <div id="quiz-box" class="quiz-container" style="display:none;">
+    <div id="question">Loading question...</div>
+    <ul id="options"></ul>
+    <button id="next-btn" disabled>Next</button>
+  </div>
+
+  <!-- RESULT UI -->
+  <div id="result-box" class="quiz-container" style="display:none;">
+    <h2 id="score-heading"><span id="player-name-final"></span>, your Score: <span id="score"></span>/8</h2>
+    <div id="explanations"></div>
+    <button id="play-again">Play Again</button>
+  </div>
+
+  <!-- ADMIN PANEL -->
+  <div class="quiz-container" id="admin-section" style="display:none; max-width: 500px;">
+    <h2>Admin’s Playground</h2>
+    <p>Welcome to the brewery of questions</p>
+    <p> Think you can challenge our members with questions from your kitchen?</p>
+    <p> Feel welcome to add your question to Ruchikkoottu</p>
+    <form id="admin-form">
+      <label>
+        Category:
+        <select id="admin-category">
+          <option value="snacks">Snacks</option>
+          <option value="main">Main Course</option>
+          <option value="curries">Curries</option>
+        </select>
+      </label>
+      <label>
+        Question:
+        <input type="text" id="admin-question" required />
+      </label>
+      <label>
+        Option 1:
+        <input type="text" id="admin-opt0" required />
+      </label>
+      <label>
+        Option 2:
+        <input type="text" id="admin-opt1" required />
+      </label>
+      <label>
+        Option 3:
+        <input type="text" id="admin-opt2" required />
+      </label>
+      <label>
+        Option 4:
+        <input type="text" id="admin-opt3" required />
+      </label>
+      <label>
+        Correct Answer:
+        <select id="admin-answer">
+          <option value="0">Option 1</option>
+          <option value="1">Option 2</option>
+          <option value="2">Option 3</option>
+          <option value="3">Option 4</option>
+        </select>
+      </label>
+      <label>
+        Explanation:
+        <textarea id="admin-explanation" rows="3" required></textarea>
+      </label>
+      <div class="admin-buttons">
+        <button type="submit" id="add-question-btn">Add Question</button>
+        <button type="button" id="admin-back-btn">Back</button>
+      </div>
+    </form>
+    <div id="admin-message"></div>
+    
+  </div>
+
+  <script src="quizScript.js"></script>
 </body>
 </html>
