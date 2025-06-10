@@ -17,7 +17,7 @@ body {
 
 font-family: 'Allura', cursive;
   
-  background: linear-gradient(135deg, #0f0401, #8f4bff);
+  background: linear-gradient(135deg, #0f0401, #d97745);
   color: rgb(227, 231, 229);
   text-align: center;
   padding: 50px 20px 30px;
@@ -65,7 +65,7 @@ font-family: 'Allura', cursive;
 .recipe-summary h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #4a1364;
+  color: rgb(104, 74, 20);
 }
 
 .recipe-summary p {
@@ -87,7 +87,7 @@ font-family: 'Allura', cursive;
   align-items: center;
   gap: 10px;
   font-weight: 600;
-  color: #ab2e42;
+  color: rgb(104, 74, 20);
 }
 
 .meta-info i {
@@ -103,7 +103,7 @@ font-family: 'Allura', cursive;
 }
 
 .tag {
-  background-color: #061b64;
+  background-color: #d97745;
   color: white;
   padding: 6px 12px;
   border-radius: 20px;
@@ -112,7 +112,7 @@ font-family: 'Allura', cursive;
 
 /* Instructions and ingredients section */
 .recipe-body {
-  background: #f2f2ff;
+  background: #f0e3dd;
   padding: 50px 20px;
   margin-top: 50px;
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
@@ -134,8 +134,8 @@ font-family: 'Allura', cursive;
 .section h3 {
   margin-bottom: 20px;
   font-size: 1.6rem;
-  color: #861045;
-  border-bottom: 2px solid #f01d83;
+  color: #623d16;
+  border-bottom: 2px solid rgb(38, 55, 20);
   padding-bottom: 5px;
 }
 
@@ -144,7 +144,7 @@ font-family: 'Allura', cursive;
 }
 
 .step-title {
-  color: #e52e71;
+  color: rgb(55, 43, 20);
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -164,7 +164,7 @@ li {
 .footer {
   text-align: center;
   padding: 30px;
-  background: linear-gradient(135deg, #0f0401, #8f4bff);
+  background: linear-gradient(135deg, #0f0401, #d97745);
   color: white;
   font-size: 0.9rem;
   margin-top: 60px;

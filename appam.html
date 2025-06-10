@@ -1,48 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Appam</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Appam | Ruchikkottu</title>
+  <link rel="stylesheet" href="recipestyles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Ruchikootu</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="recipes.html">Recipes</a>
-  </nav>
-</header>
+  <!-- Header Banner -->
+  <section class="header-banner">
+    <h1>Ruchikkottu</h1>
+  </section>
 
-<main class="section">
-  <div class="dish-detail">
-    <img src="appam.jpg" alt="Appam" class="dish-image">
-    <h2>Appam </h2>
-    <h3>Ingredients</h3>
-    <ul>
-      <li>Raw rice - 2 cups</li>
-      <li>Cooked rice - 1/2 cup</li>
-      <li>Grated coconut - 1/2 cup</li>
-      <li>Yeast - 1/2 tsp</li>
-      <li>Sugar - 1 tbsp</li>
-      <li>Salt - to taste</li>
-      <li>Water - as needed</li>
-    </ul>
-    <h3>Preparation Steps</h3>
-    <ol>
-      <li>Soak raw rice for 4 hours.</li>
-      <li>Grind with coconut, cooked rice, and water to a smooth batter.</li>
-      <li>Mix yeast and sugar, ferment for 6-8 hours.</li>
-      <li>Add salt and make soft appams in appachatti.</li>
-    </ol>
-  </div>
-</main>
+  <!-- Recipe Hero Section -->
+  <section class="recipe-hero">
+    <img src="https://imgs.search.brave.com/JDwD8VkWL8ct1Di941_o7XxRp1IyhQ9FonarbE2-sbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM2/NTE4MzE2Mi9waG90/by9sYWNlZC1iYXJu/eWFyZC1taWxsZXQt/Y3JlcGVzLXNlcnZl/ZC1hbG9uZy13aXRo/LW1peGVkLXZlZ2V0/YWJsZS1ncm91bmQt/Y29jb251dC1jYXNo/ZXctZ3JhdnkuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPUR0/ckNaUUFFdi1wVHZQ/cFlGSFFGRjNZVkRZ/U21wN05KZ19hNDZn/Y2YzdXM9" alt="Appam" />
+    <div class="recipe-summary">
+      <h2>Appam</h2>
+      <p>Soft in the center, crisp at the edges—Appam is a beloved Kerala breakfast made with fermented rice and coconut batter. Best enjoyed with stew or curry!</p>
 
-<footer>
-  &copy; 2025 Ruchikootu. All rights reserved.
-</footer>
+      <div class="meta-info">
+        <div><i class="fa-regular fa-clock"></i> Prep Time: 15 mins</div>
+        <div><i class="fa-solid fa-fire"></i> Cook Time: 20 mins</div>
+        <div><i class="fa-solid fa-user-group"></i> Servings: 4</div>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Breakfast</span>
+        <span class="tag">Vegetarian</span>
+        <span class="tag">Kerala</span>
+        <span class="tag">Classic</span>
+      </div>
+
+      <div class="video-container">
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/K5PwRzhH2QA?si=CHtJwrpP0qaMXJQU" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Body Section -->
+  <section class="recipe-body">
+    <div class="sections">
+
+      <!-- Instructions -->
+      <div class="section">
+        <h3>Instructions</h3>
+        <div class="step">
+          <div class="step-title">STEP 1</div>
+          <p>Soak raw rice for 4-5 hours. Grind with grated coconut and cooked rice into a smooth batter using water as needed.</p>
+        </div>
+        <div class="step">
+          <div class="step-title">STEP 2</div>
+          <p>Add yeast, sugar, and salt. Mix well and allow the batter to ferment overnight or for 8 hours.</p>
+        </div>
+        <div class="step">
+          <div class="step-title">STEP 3</div>
+          <p>Once fermented, stir the batter gently. Adjust consistency if too thick using a little water.</p>
+        </div>
+        <div class="step">
+          <div class="step-title">STEP 4</div>
+          <p>Heat an appachatti (appam pan), pour a ladle of batter, swirl to spread, and cover. Cook until edges crisp and center is soft.</p>
+        </div>
+        <div class="step">
+          <div class="step-title">STEP 5</div>
+          <p>Serve hot with vegetable stew, egg curry, or fish molee!</p>
+        </div>
+      </div>
+
+      <!-- Ingredients -->
+      <div class="section">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>2 cups raw rice (soaked)</li>
+          <li>1/2 cup cooked rice</li>
+          <li>1 cup grated coconut</li>
+          <li>1/2 tsp dry yeast</li>
+          <li>1 tbsp sugar</li>
+          <li>Salt to taste</li>
+          <li>Water as required</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="section">
+        <h3>Tools</h3>
+        <ul>
+          <li>Grinder or blender</li>
+          <li>Appachatti (appam pan)</li>
+          <li>Mixing bowls</li>
+          <li>Ladle</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Ruchikkottu. Cook with love ❤️
+  </footer>
 
 </body>
 </html>

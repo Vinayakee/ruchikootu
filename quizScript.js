@@ -471,7 +471,6 @@ function shuffleArray(arr) {
 // TEMP: Remove admin-added bad question with text "ko"
 }
 
-
 // TEMP: Remove admin-added bad question with text "ko"
 for (let key of Object.keys(localStorage)) {
   if (key.startsWith("questions_")) {

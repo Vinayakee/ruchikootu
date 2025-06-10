@@ -1,48 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Pazham Pori</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pazham Pori | Ruchikkottu</title>
+  <link rel="stylesheet" href="recipestyles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Ruchikootu</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="recipes.html">Recipes</a>
-  </nav>
-</header>
+  <!-- Header Banner -->
+  <section class="header-banner">
+    <h1>Ruchikkottu</h1>
+  </section>
 
-<main class="section">
-  <div class="dish-detail">
-    <img src="Pazham pori.jpg.webp" alt="Pazham Pori" class="dish-image">
-    <h2>Pazham Pori</h2>
-    <h3>Ingredients</h3>
-    <ul>
-      <li>Ripe plantains - 2</li>
-      <li>All-purpose flour - 1 cup</li>
-      <li>Rice flour - 2 tbsp</li>
-      <li>Sugar - 2 tbsp</li>
-      <li>Turmeric powder - 1/4 tsp</li>
-      <li>Water - as needed</li>
-      <li>Oil - for deep frying</li>
-    </ul>
-    <h3>Preparation Steps</h3>
-    <ol>
-      <li>Peel and slice the plantains lengthwise.</li>
-      <li>Make a smooth batter with flour, rice flour, sugar, turmeric, and water.</li>
-      <li>Dip the slices in batter and deep fry till golden brown.</li>
-      <li>Serve hot with tea!</li>
-    </ol>
-  </div>
-</main>
+  <!-- Recipe Hero Section -->
+  <section class="recipe-hero">
+    <img src="Pazham pori.jpg.webp" alt="Pazham Pori" />
+    <div class="recipe-summary">
+      <h2>Pazham Pori</h2>
+      <p>A beloved Kerala tea-time snack made from ripe bananas dipped in a lightly sweetened flour batter and deep-fried to golden perfection.</p>
 
-<footer>
-  &copy; 2025 Ruchikootu. All rights reserved.
-</footer>
+      <div class="meta-info">
+        <div><i class="fa-regular fa-clock"></i> Prep Time: 10 mins</div>
+        <div><i class="fa-solid fa-fire"></i> Cook Time: 15 mins</div>
+        <div><i class="fa-solid fa-user-group"></i> Servings: 4</div>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Snack</span>
+        <span class="tag">Tea Time</span>
+        <span class="tag">Kerala</span>
+        <span class="tag">Vegetarian</span>
+      </div>
+
+      <div class="video-container">
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/T4yx3fC_rnk?si=ks4i0-tB9uFvubbI" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Body Section -->
+  <section class="recipe-body">
+    <div class="sections">
+
+      <!-- Instructions -->
+      <div class="section">
+        <h3>Instructions</h3>
+
+        <div class="step">
+          <div class="step-title">STEP 1</div>
+          <p>Peel and slice ripe bananas (nendran) lengthwise into thin strips.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 2</div>
+          <p>In a bowl, mix all-purpose flour, rice flour, sugar, turmeric, and salt with water to make a thick, smooth batter.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 3</div>
+          <p>Dip banana slices in the batter, coating them well.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 4</div>
+          <p>Heat oil in a deep pan. Fry the coated banana slices until golden brown on both sides. Drain on paper towels.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 5</div>
+          <p>Serve hot with chai or as a sweet snack anytime!</p>
+        </div>
+      </div>
+
+      <!-- Ingredients -->
+      <div class="section">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>2 ripe nendran bananas</li>
+          <li>1/2 cup all-purpose flour (maida)</li>
+          <li>2 tbsp rice flour</li>
+          <li>2 tbsp sugar (adjust to taste)</li>
+          <li>A pinch of turmeric powder</li>
+          <li>A pinch of salt</li>
+          <li>Water as needed</li>
+          <li>Oil for deep frying</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="section">
+        <h3>Tools</h3>
+        <ul>
+          <li>Mixing bowl</li>
+          <li>Whisk or spoon</li>
+          <li>Deep frying pan</li>
+          <li>Slotted spoon</li>
+          <li>Paper towels</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Ruchikkottu. Cook with love ❤️
+  </footer>
 
 </body>
 </html>

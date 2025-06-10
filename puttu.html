@@ -1,45 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Puttu</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puttu | Ruchikkottu</title>
+  <link rel="stylesheet" href="recipestyles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header>
-  <h1>Ruchikootu</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="recipes.html">Recipes</a>
-  </nav>
-</header>
+  <!-- Header Banner -->
+  <section class="header-banner">
+    <h1>Ruchikkottu</h1>
+  </section>
 
-<main class="section">
-  <div class="dish-detail">
-    <img src="puttu.jpg" alt="Puttu" class="dish-image">
-    <h2>Puttu</h2>
-    <h3>Ingredients</h3>
-    <ul>
-      <li>Rice flour - 2 cups</li>
-      <li>Grated coconut - 1 cup</li>
-      <li>Salt - to taste</li>
-      <li>Water - as needed</li>
-    </ul>
-    <h3>Preparation Steps</h3>
-    <ol>
-      <li>Mix rice flour with salt and sprinkle water to moisten.</li>
-      <li>Layer rice flour and coconut alternately in puttu maker.</li>
-      <li>Steam for 5-7 minutes till cooked.</li>
-      <li>Serve hot with kadala curry or banana.</li>
-    </ol>
-  </div>
-</main>
+  <!-- Recipe Hero Section -->
+  <section class="recipe-hero">
+    <img src="Puttu kadala.jpg.webp" alt="Puttu" />
+    <div class="recipe-summary">
+      <h2>Puttu</h2>
+      <p>A beloved Kerala breakfast classic made with steamed rice flour and grated coconut, usually paired with kadala curry or ripe bananas. Soft, fluffy, and simple!</p>
 
-<footer>
-  &copy; 2025 Ruchikootu. All rights reserved.
-</footer>
+      <div class="meta-info">
+        <div><i class="fa-regular fa-clock"></i> Prep Time: 10 mins</div>
+        <div><i class="fa-solid fa-fire"></i> Cook Time: 10 mins</div>
+        <div><i class="fa-solid fa-user-group"></i> Servings: 2–3</div>
+      </div>
+
+      <div class="tags">
+        <span class="tag">Breakfast</span>
+        <span class="tag">Vegetarian</span>
+        <span class="tag">Kerala</span>
+        <span class="tag">Steamed</span>
+      </div>
+
+      <div class="video-container">
+        <iframe width="400" height="225" src="https://www.youtube.com/embed/jt-A_qwOHJQ?si=GRnY9WC88cn5PqTm" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Body Section -->
+  <section class="recipe-body">
+    <div class="sections">
+
+      <!-- Instructions -->
+      <div class="section">
+        <h3>Instructions</h3>
+
+        <div class="step">
+          <div class="step-title">STEP 1</div>
+          <p>Take roasted rice flour in a bowl. Add salt to taste. Sprinkle water little by little and mix using fingers to form a moist, crumbly texture.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 2</div>
+          <p>When the flour holds shape when pressed but crumbles easily, it’s ready. Rest it for 10 minutes covered with a cloth.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 3</div>
+          <p>In a puttu maker, layer grated coconut first, then rice flour, and alternate until filled. Finish with coconut on top.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 4</div>
+          <p>Steam the puttu on a pressure cooker or steamer for 7–10 minutes or until you see steam coming out and the puttu is firm.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-title">STEP 5</div>
+          <p>Serve hot with kadala curry, banana, or sugar and ghee.</p>
+        </div>
+      </div>
+
+      <!-- Ingredients -->
+      <div class="section">
+        <h3>Ingredients</h3>
+        <ul>
+          <li>1 cup roasted rice flour (puttu podi)</li>
+          <li>1/2 cup grated coconut</li>
+          <li>Salt to taste</li>
+          <li>Water (as needed)</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="section">
+        <h3>Tools</h3>
+        <ul>
+          <li>Puttu maker (cylindrical or cheratta style)</li>
+          <li>Mixing bowl</li>
+          <li>Steamer or pressure cooker</li>
+          <li>Measuring cup</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 Ruchikkottu. Cook with love ❤️
+  </footer>
 
 </body>
 </html>
