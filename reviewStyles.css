@@ -1,0 +1,139 @@
+body {
+  background-color: #fff8f2;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  background-color: #d97745;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.styled-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #f8f8f8;
+  font-weight: 600;
+  margin: 0;
+}
+
+nav a {
+  margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  color: #d2691e;
+  text-align: center;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border: 2px solid #ffdead;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #e3643b;
+}
+
+#thankYouMessage, #suggMessage {
+  text-align: center;
+  font-size: 1.2em;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.review-list {
+  margin-top: 20px;
+}
+
+.review-item {
+  background: #fff3e6;
+  border-left: 4px solid #ffa07a;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+
+.fade-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.highlight {
+  text-align: center;
+  background: #fff0e0;
+  border: 1px solid #ffcba4;
+  border-radius: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.highlight img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+
