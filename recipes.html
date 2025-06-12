@@ -50,6 +50,49 @@
       margin: 5px 0 0;
       color: #777;
     }
+    /* Search Section */
+.find-more {
+  background-color: #fffdf6;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.find-more h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  padding: 12px 20px;
+  width: 50%;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.search-box button {
+  background-color: #d97745;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #d99b7c;
+}
+
   </style>
 </head>
 <body>
@@ -58,9 +101,23 @@
     <nav>
       <a href="home.html">Home</a>
       <a href="recipes.html" class="active">Recipes</a>
-      <a href="games.html">Games</a>
+      <a href="quizIndex.html">Games</a>
     </nav>
   </header>
+
+<!-- Search More Recipes Section -->
+<section class="find-more">
+  <h2>Find a Recipe</h2>
+  <div class="search-box">
+    <input type="text" id="home-search" placeholder="I'm craving for...">
+    <button onclick="goToSearch()">SEARCH</button>
+
+  <div id="search-message" style="display:none; margin-top: 10px; color: #d00;">
+  Recipe not found. <a href="review.html" style="color:blue; text-decoration: underline;">Suggest us here</a>
+  </div>
+
+  </div>
+</section>
 
   <section class="section">
     <h3>Explore Traditional Kerala Recipes</h3>
@@ -68,7 +125,7 @@
       <!-- Cards will auto-load via JavaScript for sorting -->
     </div>
   </section>
-
+   
   <footer>
     <p>&copy; 2025 Ruchikootu. Taste of tradition!</p>
   </footer>
@@ -76,6 +133,14 @@
   <script>
     // Array of recipe objects
     const recipes = [
+      { title: "Chicken Fry", img: "https://imgs.search.brave.com/f9NCQT3TsW62IOffzNFwLGpAVOJVZ53kgm12qjWxY9M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vcGhvdG9z/L2dyaWxsZWQtY2hp/Y2tlbi1sZWdzLWlu/LWJhcmJlY3VlLW1h/cmluYWRlLXdpdGgt/c3dlZXQtcG90YXRv/ZXMtcGljdHVyZS1p/ZDExNjgyMDMwODE_/az0yMCZtPTExNjgy/MDMwODEmcz02MTJ4/NjEyJnc9MCZoPTAw/OE9DZzAyOHNER0dy/eE9GcGhlLXA0NkxD/MjhmY3RnR2JnZ0JH/TE9ld0U9", link: "Chicken fry.html", rating: 4 },
+      { title: "Chicken Kondattam", img: "Chicken kondattam.avif", link: "chicken-kondattam.html", rating: 4 },
+      { title: "Chicken Stew", img: "chicken-stew.jpeg", link: "Chicken stew.html", rating: 4 },
+      { title: "Pepper Chicken Roast", img: "Pepper-Chicken-roast.jpeg.webp", link: "Pepper chicken roast.html", rating: 4 },
+      { title: "Kanji & Payar", img: "kanji-payar.jpg", link: "kanji payar.html", rating: 4 },
+      { title: "Idli", img: "Idli.webp", link: "Idli.html", rating: 4 },
+      { title: "Dosa", img: "Dosa.webp", link: "Dosa.html", rating: 4 },
+      { title: "Beef Roast", img: "Beef-roast.jpg", link: "Beef roast.html", rating: 4 },
       { title: "Appam", img: "appam.webp", link: "appam.html", rating: 5 },
       { title: "Bun Porotta", img: "bun-porotta.webp", link: "bun-porotta.html", rating: 4 },
       { title: "Fish Curry", img: "Fish curry.jpg", link: "fish-curry.html", rating: 4 },
@@ -135,6 +200,32 @@
         </a>
       `;
     });
+  function goToSearch() {
+    const searchInput = document.getElementById("home-search").value.trim().toLowerCase();
+    const message = document.getElementById("search-message");
+
+    let found = false;
+
+    // Check if any recipe title matches the search
+    for (let r of recipes) {
+      if (r.title.toLowerCase().includes(searchInput)) {
+        // If found, scroll to that card
+        const link = document.querySelector(`a.card-link[href="${r.link}"]`);
+        if (link) {
+          link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          link.style.outline = "2px solid #d97745"; // highlight found card
+          setTimeout(() => link.style.outline = "", 1500);
+        }
+        message.style.display = "none";
+        found = true;
+        break;
+      }
+    }
+
+    if (!found) {
+      message.style.display = "block";
+    }
+  }
   </script>
 </body>
 </html>

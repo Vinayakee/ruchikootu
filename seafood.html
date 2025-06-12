@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seafood Recipes | Ruchikootu</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+    }
+
+    header {
+      background-color: #d97745;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .container {
+      font-family: 'Playfair Display', serif;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .seafood-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .seafood-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .seafood-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .seafood-content {
+      padding: 20px;
+    }
+
+    .label {
+      color: #888;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 5px 0;
+      color: #d97745;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (min-width: 750px) {
+      .seafood-card {
+        flex-direction: row;
+      }
+
+      .seafood-card img {
+        width: 40%;
+        height: 180px;
+      }
+
+      .seafood-content {
+        width: 60%;
+      }
+    }
+
+    footer.custom-footer {
+      background-color: #d97745;
+      color: #ccc;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 class="styled-heading">Ruchikootu</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="quizIndex.html">Games</a>
+    </nav>
+  </header>
+
+  <!-- Seafood Recipe Cards -->
+  <div class="container">
+    <h1>Delicious Seafood Recipes</h1>
+
+    <a href="fish-curry.html">
+      <div class="seafood-card">
+        <img src="Fish curry.jpg" alt="Fish Curry" />
+        <div class="seafood-content">
+          <div class="label">Recipe</div>
+          <div class="title">Fish Curry</div>
+          <div class="quote">“Tangy, spicy and a coastal classic — perfect with steamed rice.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="fish-molee.html">
+      <div class="seafood-card">
+        <img src="Fish mole.jpg" alt="Fish Molee" />
+        <div class="seafood-content">
+          <div class="label">Recipe</div>
+          <div class="title">Fish Molee</div>
+          <div class="quote">“Mild and creamy coconut delight — a Kerala special.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="kappa_meen_curry.html">
+      <div class="seafood-card">
+        <img src="kappa meen curry.jpg" alt="Kappa Meen Curry" />
+        <div class="seafood-content">
+          <div class="label">Recipe</div>
+          <div class="title">Kappa Meen Curry</div>
+          <div class="quote">“Spiced fish curry with mashed tapioca — a rustic Kerala soul food.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="meen-pollichathu.html">
+      <div class="seafood-card">
+        <img src="https://imgs.search.brave.com/Kze21qK-Ax2BcAoIEwPUkZfEj9cZKFpmvsNn8hA_OtQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uaXNo/a2l0Y2hlbi5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMTkv/MDYvTWVlbi1Qb2xs/aWNoYXRodS0zQi5q/cGc" alt="Meen Pollichathu" />
+        <div class="seafood-content">
+          <div class="label">Recipe</div>
+          <div class="title">Meen Pollichathu</div>
+          <div class="quote">“Banana leaf-wrapped fish, steamed in masala — flavor bomb!”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="prawns-masala.html">
+      <div class="seafood-card">
+        <img src="https://imgs.search.brave.com/IA_gS-UfFvm7ng6xW2ynQZxHm_4-C02adTftl7xxJV0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Zmxhdm9yc29mbXVt/YmFpLmNvbS93cC1j/b250ZW50L3VwbG9h/ZHMvMjAxNi8wMS9Q/cmF3bnMtTWFzYWxh/LW9yLUtvbGFtYmkt/TWFzYWxhLVJlY2lw/ZS0yMC5qcGc" alt="Prawns Masala" />
+        <div class="seafood-content">
+          <div class="label">Recipe</div>
+          <div class="title">Prawns Masala</div>
+          <div class="quote">“Juicy prawns in fiery masala — every bite is a celebration.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="squid-fry.html">
+      <div class="seafood-card">
+        <img src="https://imgs.search.brave.com/3OLsw5CnOcIdK3waQTR6Oy3qnutH0xBFnlf1g2_mbng/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWct/Z2xvYmFsLmNwY2Ru/LmNvbS9yZWNpcGVz/LzczNzdhYjY0ZDA5/ZGZjYjIvNjgweDk2/NGNxOTAvc3BpY3kt/c3F1aWQtbWFzYWxh/LWZyeS1yZWNpcGUt/bWFpbi1waG90by5q/cGc" alt="Squid Fry" />
+        <div class="seafood-content">
+          <div class="label">Recipe</div>
+          <div class="title">Squid Fry</div>
+          <div class="quote">“Crispy, peppery and tender — Kerala-style kallumakkaya magic.”</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="custom-footer">
+    <div class="footer-links">
+      <a href="recipes.html">All Categories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Help</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ruchikootu. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
