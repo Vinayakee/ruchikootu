@@ -131,9 +131,17 @@ button:hover {
   margin-bottom: 15px;
 }
 
-@keyframes scroll {
+/*@keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
+}*/
+
+footer{
+  background-color: #d97745;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
-
-
