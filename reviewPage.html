@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ruchikootu - Reviews & Suggestions</title>
+  <link rel="stylesheet" href="reviewStyles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 🌟 Ruchikkottu Header -->
+  <header>
+    <h1 class="styled-heading">Ruchikkottu</h1>
+    <nav>
+      <!-- Add your nav links here -->
+      <a href="home.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="quizIndex.html">Quiz</a>
+      <a href="reviewPage.html">Reviews</a>
+    </nav>
+  </header>
+
+<h1 class="styled-heading">Ruchikootu</h1><nav>
+  <a href="home.html">Home</a>
+  <a href="recipes.html">Recipes</a>
+  <a href="quizIndex.html">Games</a>
+  </header>
+
+
+
+  <div class="container">
+    <h1>Share Your Review</h1>
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="text" id="subject" placeholder="Subject" required />
+      <textarea id="review" placeholder="Write your review..." required></textarea>
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <div id="thankYouMessage" class="hidden">Thank you for your review! 🎉</div>
+
+  <h2>Highlighted Reviews</h2>
+<div class="carousel-container fade-carousel">
+  <div class="highlight" id="highlightedReview">
+    <img id="highlightImg" src="usermain.jpeg" alt="Reviewer">
+    <p id="highlightText">
+      "My family loved the Ghee Rice recipe! The aroma of the kappa paired beautifully with chicken curry. Highly recommend trying it out!"
+      <br><strong>- Bindhu, Kottayam</strong>
+    </p>
+  </div>
+</div>
+
+
+    </div>
+
+    <h2>All Reviews</h2>
+    <div id="reviewsList" class="review-list"></div>
+
+    <hr />
+    <h1>Suggestions for Us</h1>
+    <form id="suggestionForm">
+      <input type="text" id="suggName" placeholder="Your Name" required />
+      <textarea id="suggestion" placeholder="Your suggestions to improve the app..." required></textarea>
+      <button type="submit">Submit Suggestion</button>
+    </form>
+
+    <div id="suggMessage" class="hidden">Thanks for helping us improve 💡</div>
+  </div>
+  <footer class="policies">
+  <div class="policies">
+    <a href="#">All Categories</a>
+    <a href="#">Site Map</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Help</a>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Ruchikootu. All rights reserved.</p>
+    <p class="policies">
+      <a href="#">Advertise</a> |
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Visitor Agreement</a>
+    </p>
+  </div>
+</footer>
+
+  <script src="reviewScript.js"></script>
+</body>
+</html>
