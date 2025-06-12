@@ -1,163 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Admin Dashboard | Ruchikootu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('admin-login.avif'); 
-    background-size: cover;
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard | Ruchikootu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url('admin-login.avif'); 
+      background-size: cover;
+    }
+
+    .dashboard {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  width: 500px;
+  max-height: 90vh;  
+  overflow-y: auto;   
 }
 
-.login-container, .dashboard {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-}
 
-input, button {
-    text-align: center;
-    width: 100%;
-    margin: 10px 0;
-    padding: 8px;
-}
+    input, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
 
-.dashboard {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-}
+    label {
+      font-weight: bold;
+    }
 
-.stats-panel {
-    position: absolute;
-    top: 20px;
-    right: 20px; /* You can change to `left: 20px;` if you prefer left-aligned stats */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px;
-    border-radius: 10px;
-    color: white;
-    font-size: 16px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+    .stats-panel {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
 
-.stat {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin: 5px 0;
-}
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 5px 0;
+    }
 
-.stat i {
-    font-size: 20px;
-    color: gold;
-}
+    .stat i {
+      font-size: 20px;
+      color: gold;
+    }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    width: 100%; /* Ensures alignment with input fields */
-}
+    .dynamic-fields {
+      margin-top: 10px;
+    }
 
-li {
-    display: flex;
-    justify-content: center; /* Centers text and delete button */
-    align-items: center;
-    gap: 10px; /* Adds spacing between text and delete button */
-    padding: 8px;
-    background: #f8f8f8;
-    border-radius: 5px;
-    margin: 5px 0;
-    width: 100%;
-}
+    .dynamic-fields input {
+      margin-bottom: 5px;
+    }
 
-button {
-    background: #461403;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    cursor: pointer;
-    border-radius: 3px;
-}
-    </style>
+    .submit-btn {
+      background-color: #461403;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+
+  </style>
 </head>
 <body>
-    <div class="dashboard">
-        <h2>Welcome, Admin!</h2>
-        
-        <h3>Add Recipe</h3>
-        <input type="text" id="recipeName" placeholder="Enter recipe name">
-        <button id="addRecipeBtn">Add Recipe</button>
+  <div class="dashboard">
+    <h2>Welcome, Admin!</h2>
+    <h3>Add New Recipe</h3>
 
-        <h3>Recipe List</h3>
-        <ul id="recipeList"></ul>
+    <form id="recipeForm">
+      <label for="recipeName">Recipe Name</label>
+      <input type="text" id="recipeName" required />
 
-    </div>
-    <div class="stats-panel">
-    <div class="stat">
-        <i class="fas fa-eye"></i> <span id="viewsCount">10,234</span> Views
-    </div>
-    <div class="stat">
-        <i class="fas fa-star"></i> <span id="reviewsCount">985</span> Reviews
-    </div>
-    <div class="stat">
-        <i class="fas fa-users"></i> <span id="usersReached">5,432</span> Users Reached
-    </div>
-    </div>
+      <label>Number of Ingredients</label>
+      <input type="number" id="numIngredients" min="1" required />
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    let recipeList = document.getElementById("recipeList");
-    let addRecipeBtn = document.getElementById("addRecipeBtn");
+      <label>Number of Steps</label>
+      <input type="number" id="numSteps" min="1" required />
 
-    addRecipeBtn.addEventListener("click", function() {
-        let recipeName = document.getElementById("recipeName").value.trim();
-        if (recipeName !== "") {
-            let li = document.createElement("li");
-            li.textContent = recipeName;
-            
-            let deleteBtn = document.createElement("button");
-            deleteBtn.textContent = "Delete";
-            deleteBtn.style.marginLeft = "10px";
-            deleteBtn.addEventListener("click", function() {
-                recipeList.removeChild(li);
-            });
+      <label>Number of Tools Needed</label>
+      <input type="number" id="numTools" min="0" required />
 
-            li.appendChild(deleteBtn);
-            recipeList.appendChild(li);
-            document.getElementById("recipeName").value = ""; // Clear input field
+      <label>Cook Time (in mins)</label>
+      <input type="number" id="cookTime" min="1" required />
 
+      <label>Prepare Time (in mins)</label>
+      <input type="number" id="prepareTime" min="1" required />
+
+      <label>Servings</label>
+      <input type="number" id="servings" min="1" required />
+
+      <div class="dynamic-fields" id="ingredientsContainer"></div>
+      <div class="dynamic-fields" id="stepsContainer"></div>
+      <div class="dynamic-fields" id="toolsContainer"></div>
+
+      <button type="button" onclick="generateFields()">Generate Fields</button>
+      <button type="submit" class="submit-btn">Add Recipe</button>
+      <p class="error" id="errorMsg"></p>
+    </form>
+  </div>
+
+  <div class="stats-panel">
+    <div class="stat"><i class="fas fa-eye"></i> <span id="viewsCount">10,234</span> Views</div>
+    <div class="stat"><i class="fas fa-star"></i> <span id="reviewsCount">985</span> Reviews</div>
+    <div class="stat"><i class="fas fa-users"></i> <span id="usersReached">5,432</span> Users Reached</div>
+  </div>
+
+  <script>
+    function generateFields() {
+      const ingCount = parseInt(document.getElementById("numIngredients").value);
+      const stepCount = parseInt(document.getElementById("numSteps").value);
+      const toolCount = parseInt(document.getElementById("numTools").value);
+
+      const ingContainer = document.getElementById("ingredientsContainer");
+      const stepContainer = document.getElementById("stepsContainer");
+      const toolContainer = document.getElementById("toolsContainer");
+
+      ingContainer.innerHTML = "<h4>Ingredients</h4>";
+      stepContainer.innerHTML = "<h4>Steps</h4>";
+      toolContainer.innerHTML = "<h4>Tools</h4>";
+
+      for (let i = 1; i <= ingCount; i++) {
+        ingContainer.innerHTML += `<input type="text" name="ingredient${i}" placeholder="Ingredient ${i}" required />`;
+      }
+
+      for (let i = 1; i <= stepCount; i++) {
+        stepContainer.innerHTML += `<input type="text" name="step${i}" placeholder="Step ${i}" required />`;
+      }
+
+      for (let i = 1; i <= toolCount; i++) {
+        toolContainer.innerHTML += `<input type="text" name="tool${i}" placeholder="Tool ${i}" required />`;
+      }
+    }
+
+    document.getElementById("recipeForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const inputs = form.querySelectorAll("input[required]");
+      const errorMsg = document.getElementById("errorMsg");
+      let valid = true;
+
+      inputs.forEach((input) => {
+        if (input.value.trim() === "") {
+          valid = false;
         }
-    });
-});
-document.addEventListener("DOMContentLoaded", function () {
-    let viewsCount = document.getElementById("viewsCount");
-    let reviewsCount = document.getElementById("reviewsCount");
-    let usersReached = document.getElementById("usersReached");
+      });
 
-    // Simulating increment over time (for demo purposes)
+      if (!valid) {
+        errorMsg.textContent = "Please fill out all required fields.";
+        return;
+      }
+
+      errorMsg.textContent = "";
+      alert("Recipe added successfully!");
+
+      form.reset();
+      document.getElementById("ingredientsContainer").innerHTML = "";
+      document.getElementById("stepsContainer").innerHTML = "";
+      document.getElementById("toolsContainer").innerHTML = "";
+    });
+
+    // Stats panel incrementer
     setInterval(() => {
-        viewsCount.textContent = parseInt(viewsCount.textContent) + Math.floor(Math.random() * 10);
-        reviewsCount.textContent = parseInt(reviewsCount.textContent) + Math.floor(Math.random() * 2);
-        usersReached.textContent = parseInt(usersReached.textContent) + Math.floor(Math.random() * 5);
-    }, 3000); // Update every 3 seconds
-});
-    </script>
+      document.getElementById("viewsCount").textContent = parseInt(document.getElementById("viewsCount").textContent) + Math.floor(Math.random() * 10);
+      document.getElementById("reviewsCount").textContent = parseInt(document.getElementById("reviewsCount").textContent) + Math.floor(Math.random() * 2);
+      document.getElementById("usersReached").textContent = parseInt(document.getElementById("usersReached").textContent) + Math.floor(Math.random() * 5);
+    }, 3000);
+  </script>
 </body>
 </html>

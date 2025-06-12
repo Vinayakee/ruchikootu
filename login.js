@@ -59,3 +59,12 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error: Admin link not found.");
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const googleBtn = document.querySelector(".google-btn");
+
+  googleBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    prompt("Please enter your Gmail address");
+  });
+});
+
