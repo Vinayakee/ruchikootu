@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evening Snacks | Ruchikootu</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fefcf9;
+    }
+
+    header {
+      background-color: #d97745;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #fff;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .container {
+      font-family: 'Playfair Display', serif;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .label {
+      color: #999;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 24px;
+      color: #d97745;
+      font-family: 'Playfair Display', serif;
+      margin: 5px 0;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (min-width: 750px) {
+      .card {
+        flex-direction: row;
+      }
+
+      .card img {
+        width: 40%;
+      }
+
+      .card-content {
+        width: 60%;
+      }
+    }
+
+    footer.custom-footer {
+      background-color: #d97745;
+      color: #ccc;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Ruchikootu</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="quizIndex.html">Games</a>
+    </nav>
+  </header>
+
+  <!-- Snack Cards -->
+  <div class="container">
+    <h1>Evening Snacks</h1>
+
+    <a href="pazham-pori.html">
+      <div class="card">
+        <img src="Pazham pori.jpg.webp" alt="Pazham Pori" />
+        <div class="card-content">
+          <div class="label">Snack</div>
+          <div class="title">Pazham Pori</div>
+          <div class="quote">“Golden fried ripe banana fritters – Kerala’s tea time favorite.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="kozhakatta.html">
+      <div class="card">
+        <img src="Kozhakatta.jpeg" alt="Kozhakatta" />
+        <div class="card-content">
+          <div class="label">Sweet</div>
+          <div class="title">Kozhakatta</div>
+          <div class="quote">“Steamed rice dumplings filled with sweet coconut and jaggery.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="banana-chips.html">
+      <div class="card">
+        <img src="Banana chips.jpg" alt="Banana Chips" />
+        <div class="card-content">
+          <div class="label">Crispy</div>
+          <div class="title">Banana Chips</div>
+          <div class="quote">“Crunchy, salty banana slices – the king of Kerala snacks.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="pakoda.html">
+      <div class="card">
+        <img src="pakoda.webp" alt="Pakkoda" />
+        <div class="card-content">
+          <div class="label">Fried</div>
+          <div class="title">Pakkoda</div>
+          <div class="quote">“Deep-fried crispy delights with onion and gram flour.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="unniyappam.html">
+      <div class="card">
+        <img src="unniyappam.webp" alt="Unniyappam" />
+        <div class="card-content">
+          <div class="label">Traditional</div>
+          <div class="title">Unniyappam</div>
+          <div class="quote">“Sweet, soft rice cakes flavored with banana and jaggery.”</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="custom-footer">
+    <div class="footer-links">
+      <a href="recipes.html">All Categories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Help</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ruchikootu. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

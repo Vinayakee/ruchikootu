@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comfort Food | Ruchikootu</title>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #fefdf9;
+    }
+
+    header {
+      background-color: #d97745;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .container {
+      font-family: 'Playfair Display', serif;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .comfort-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      overflow: hidden;
+      margin-bottom: 40px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .comfort-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .comfort-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .comfort-content {
+      padding: 20px;
+    }
+
+    .label {
+      color: #888;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 5px 0;
+      color: #d97745;
+    }
+
+    .quote {
+      font-style: italic;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (min-width: 750px) {
+      .comfort-card {
+        flex-direction: row;
+      }
+
+      .comfort-card img {
+        width: 40%;
+        height: 180px;
+      }
+
+      .comfort-content {
+        width: 60%;
+      }
+    }
+
+    footer.custom-footer {
+      background-color: #d97745;
+      color: #ccc;
+      padding: 30px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1 class="styled-heading">Ruchikootu</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="recipes.html">Recipes</a>
+      <a href="quizIndex.html">Games</a>
+    </nav>
+  </header>
+
+  <!-- Comfort Food Cards -->
+  <div class="container">
+    <h1>Comfort Food Classics</h1>
+
+    <a href="pazham-pori.html">
+      <div class="comfort-card">
+        <img src="Pazham pori.jpg.webp" alt="Pazhampori" />
+        <div class="comfort-content">
+          <div class="label">Recipe</div>
+          <div class="title">Pazhampori</div>
+          <div class="quote">“Crispy golden banana fritters — tea-time nostalgia.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="paalada-payasam.html">
+      <div class="comfort-card">
+        <img src="palada-payasam-1.jpeg" alt="Palada Payasam" />
+        <div class="comfort-content">
+          <div class="label">Recipe</div>
+          <div class="title">Palada Payasam</div>
+          <div class="quote">“Creamy rice ada dessert — Onam’s grand finale.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="payassam.html">
+      <div class="comfort-card">
+        <img src="Paal payasam.jpg" alt="Paal Payasam" />
+        <div class="comfort-content">
+          <div class="label">Recipe</div>
+          <div class="title">Paal Payasam</div>
+          <div class="quote">“Slow-cooked milk and rice pudding — soul-soothing sweetness.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="kothu-porotta.html">
+      <div class="comfort-card">
+        <img src="https://imgs.search.brave.com/-MCSeqcWNYRd89Y19E0trkA8UIut2KNiwV8wMm5ySsw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jaGlj/a2VuLWtvdGh1LXBh/cm90dGEtY3Vycmll/ZC1zaHJlZGRlZC1p/bmRpYW4tZmxhdGJy/ZWFkLXBvcHVsYXIt/c291dGgtc3RyZWV0/LWZvb2QtbWFkZS1s/YXllcmVkLWJyZWFk/LXBpZWNlcy1tZWF0/LWVnZy0yMjU5Mjcz/NjkuanBn" alt="Kothu Porotta" />
+        <div class="comfort-content">
+          <div class="label">Recipe</div>
+          <div class="title">Kothu Porotta</div>
+          <div class="quote">“Shredded porotta stir-fried with spices — spicy street comfort.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="malabar-biriyani.html">
+      <div class="comfort-card">
+        <img src="Malabar biriyani.jpg" alt="Malabar Biriyani" />
+        <div class="comfort-content">
+          <div class="label">Recipe</div>
+          <div class="title">Malabar Biriyani</div>
+          <div class="quote">“Fragrant rice with layered masala — celebration in every spoon.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="kerala_sadhya.html">
+      <div class="comfort-card">
+        <img src="kerala-sadhya.jpg" alt="Sadhya" />
+        <div class="comfort-content">
+          <div class="label">Recipe</div>
+          <div class="title">Sadhya</div>
+          <div class="quote">“A feast on a banana leaf — the essence of Kerala culture.”</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="kanji payar.html">
+      <div class="comfort-card">
+        <img src="kanji-payar.jpg" alt="Kanji Payar" />
+        <div class="comfort-content">
+          <div class="label">Recipe</div>
+          <div class="title">Kanji Payar</div>
+          <div class="quote">“Rice gruel with green gram — humble, hearty, healing.”</div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="custom-footer">
+    <div class="footer-links">
+      <a href="recipes.html">All Categories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Help</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Ruchikootu. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

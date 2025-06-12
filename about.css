@@ -1,7 +1,7 @@
 /* Basic Reset & Global Styles */
 :root {
   --primary-color: #A0522D; /* Sienna - a warm brown */
-  --secondary-color: #D2B48C; /* Tan - a lighter, softer brown */
+  --secondary-color: #d97745; /* Tan - a lighter, softer brown */
   --accent-color: #FF6347; /* Tomato - a vibrant reddish-orange for highlights */
   --text-color: #333;
   --light-text-color: #555;

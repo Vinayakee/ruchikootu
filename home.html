@@ -74,6 +74,11 @@
       <img src="Thoran.jpg" alt="Meal time courses">
       <p>MEAL TIME<br>COURSES</p>
     </a>
+
+    <a href="snacks.html" class="explore-item">
+      <img src="pakoda.webp" alt="Meal time courses">
+      <p>EVENING<br>SNACKS</p>
+    </a>
   </div>
 </section>
 
@@ -82,20 +87,19 @@
 <section class="trending">
   <div class="trending-header">
     <h3>Trending Now</h3>
-    <a href="trending.html" class="view-all">View All</a>
   </div>
   <div class="trending-container">
-    <a href="fish-curry.html" class="trending">
-      <img src="Fish curry.jpg" alt="Fish Curry">
-      <h4>Fish Curry</h4>
+    <a href="Chicken stew.html" class="trending">
+      <img src="chicken-stew.jpeg" alt="Chicken Stew">
+      <h4>Chicken Stew</h4>
     </a>
-    <a href="sambar.html" class="trending">
-      <img src="Sambar.jpgwebp.webp" alt="Sambar">
-      <h4>Sambar</h4>
+    <a href="bun-porotta.html" class="trending">
+      <img src="bun-porotta.webp" alt="Bun Porotta">
+      <h4>Bun Porotta</h4>
     </a>
-    <a href="puttu.html" class="trending">
-      <img src="Puttu kadala.jpg.webp" alt="Puttu Kadala">
-      <h4>Puttu Kadala</h4>
+    <a href="kanji payar.html" class="trending">
+      <img src="kanji-payar.jpg" alt="Kanji Payar">
+      <h4>Kanji Payar</h4>
     </a>
   </div>
 </section>
@@ -116,16 +120,6 @@
   </a>
 </section>
 
-
-<!-- Search More Recipes Section -->
-<section class="find-more">
-  <h2>Find More Recipes</h2>
-  <div class="search-box">
-    <input type="text" id="craving-search" placeholder="I'm craving...">
-    <button onclick="searchRecipes()">SEARCH</button>
-  </div>
-</section>
-
 <!-- Footer Section -->
 <footer class="custom-footer">
   <div class="footer-links">
@@ -136,34 +130,9 @@
   </div>
   <div class="footer-bottom">
     <p>&copy; 2025 Ruchikootu. All rights reserved.</p>
-    <p class="policies">
-      <a href="#">Advertise</a> |
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Visitor Agreement</a>
-    </p>
+    <p>Made with Love</p>
   </div>
 </footer>
 
-<script>
-function searchRecipes() {
-  let input = document.getElementById("search-bar").value.toLowerCase();
-  let cards = document.querySelectorAll(".card");
-
-  cards.forEach(card => {
-    let recipeName = card.querySelector("h4").innerText.toLowerCase();
-    card.style.display = recipeName.includes(input) ? "block" : "none";
-  });
-}
-function searchRecipes() {
-  let input = document.getElementById("search-bar")?.value || document.getElementById("craving-search").value.toLowerCase();
-  let cards = document.querySelectorAll(".card, .trending");
-
-  cards.forEach(card => {
-    let recipeName = card.querySelector("h4")?.innerText.toLowerCase() || "";
-    card.style.display = recipeName.includes(input) ? "block" : "none";
-  });
-}
-
-</script>
 </body>
 </html>
