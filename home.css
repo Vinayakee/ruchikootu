@@ -145,7 +145,7 @@ h3{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 100px;
+  gap: 150px;
   margin-top: 20px;
 }
 
@@ -262,6 +262,11 @@ h3{
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.6;
+}
+a.category-box, a.explore-item, a.trending {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 /* Search Section */
